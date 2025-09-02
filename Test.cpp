@@ -1,37 +1,48 @@
 #include<iostream>
 using namespace std;
-class Test
+class A
 {
-    private:
-    static int cnt1;
-    static int cnt2;
-
     public:
-    static int getcnt1()
+    int a;
+    A()
     {
-        return cnt1;
-    }
-    Test()
-    {
-        cnt1++;
-        cout<<this;
-        cout<<"constuctor is called";
-    }
-    ~Test()
-    {
-        cout<<"Distructor is called";
-        cout<<this;
+        cout<<"in default of A"<<endl;
     }
 };
-int Test ::cnt1=0;
-int Test::cnt2=0;
+class B:public A
+{
+    public:
+    int b;
+    B()
+    {
+        cout<<"constructor of B"<<endl;
+    }
+};
+class C:public A
+{
+    public:
+    int c;
+    C()
+    {
+        cout<<"default constructor of C"<<endl;
+    }
+};
+class D:public C,public B
+{
+        public:
+        int d;
+        D()
+        {
+            cout<<"default constructor of D"<<endl;
+        }
+
+};
 int main()
 {
-    Test t;
-    cout<<&t<<endl;
-	  Test t1;
-    cout<<&t1<<endl;
-   cout<<"no of cons called"<< Test::getcnt1()<<endl;
-   
+    A aobj;
+    B bobj;
+    C cobj;
+    D dobj;
+    cout<<sizeof(aobj);
 
 }
