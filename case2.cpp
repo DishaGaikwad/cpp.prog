@@ -1,40 +1,15 @@
-#include<iostream>
-using namespace std;
-class A
-{
-    int a;
-    public:
-    A();
-    void display();
-};
-A::A()
-{
-    cout<<"in default of A\n";
-    a=0;
-}
-void A::display()
-{
-    cout<<a<<endl;
-}
-class B:public A
-{
-    int b;
-public:
-	B(int,int);
-	void display();
-};
-B::B(int q ,int p)
-{
-    cout<<"in para of B\n";
-	b=q;
-}
-void B::display()
-{
-	A::display();
-	cout<<b<<endl;
-}
-int main()
-{
-	B bobj(10,20);
-	bobj.display();
+
+//const pointer pointing to non const integer
+#include <iostream>  
+using namespace std;  
+#include<string.h>
+int main()  
+{  
+  	int a=10;
+  	int y=20;
+ int * const ptr=&a;
+   cout<<*ptr;
+  *ptr=5;//allowed
+  a=5;//allowed
+  //ptr=&y;//error
 }
