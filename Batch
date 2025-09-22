@@ -1,0 +1,32 @@
+📌 Question
+
+Question:
+Design a Course Management System in C++ using OOP concepts.
+
+1. Create an abstract base class Person with pure virtual functions getRole() and displayDetails().
+
+
+2. Derive two classes from it:
+
+Student (attributes: rollNo, name, course, marks[3])
+
+Faculty (attributes: employeeID, name, subjectTaught)
+
+
+
+3. Implement encapsulation by keeping attributes private and accessing them via constructors.
+
+
+4. Demonstrate abstraction and function overriding by overriding getRole() and displayDetails() in both derived classes.
+
+
+5. Store at least 5 Students and 2 Faculty objects in an array of base class pointers.
+
+
+6. Calculate and display the average marks of students.
+
+
+7. Implement constructor and destructor for each class to show object creation and destruction.
+
+
+8. Use runtime polymorphism to display all details using base class pointers.
